@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TravelPlanner</string>
+    <!-- Add these lines below -->
+    <string name="channel_name">Travel Planner Notifications</string>
+    <string name="channel_description">Notifications for upcoming trips and vacations</string>
+</resources>

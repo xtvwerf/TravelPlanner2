@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.VacationDetails"
+    android:background="#EFF294"
+    >
+    <!-- a user-friendly, functional GUI -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="409dp"
+        android:layout_height="match_parent"
+        android:background="#EFF294"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/EditVacationDetails">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:padding="10dp"
+                android:text="Edit/Add Vacation"
+                android:textSize="25dp">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:padding="10dp"
+                    android:text="Vacation: "></TextView>
+
+                <EditText
+                    android:id="@+id/titletext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.7"
+                    android:padding="10dp"
+                    android:hint="Vacation"></EditText>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:padding="10dp"
+                    android:text="Start Date: "></TextView>
+
+                <TextView
+                    android:id="@+id/startDatePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:padding="10dp"
+                    android:hint="01/01/25"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:padding="10dp"
+                    android:text="Hotel: "></TextView>
+
+                <EditText
+                    android:id="@+id/hoteltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.7"
+                    android:padding="10dp"
+                    android:hint="Hotel"></EditText>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:padding="10dp"
+                    android:text="End Date: "></TextView>
+
+                <TextView
+                    android:id="@+id/endDatePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:padding="10dp"
+                    android:hint="01/01/25"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:layout_weight="0.1"
+                    android:text="Details: "></TextView>
+
+                <EditText
+                    android:id="@+id/note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.7"
+                    android:padding="10dp"
+                    android:hint="Details"></EditText>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:padding="10dp"
+                    android:text="Notify Me: "></TextView>
+
+                <CheckBox
+                    android:id="@+id/notifyMeVacation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:padding="10dp"
+                android:text="Excursions"
+                android:textSize="25dp"></TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/excursionrecyclerview"
+                android:layout_width="409dp"
+                android:layout_height="457dp"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="201dp"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:backgroundTint="#A6BF49"
+        app:tint="#EFF294"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
